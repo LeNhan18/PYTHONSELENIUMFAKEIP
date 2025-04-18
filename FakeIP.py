@@ -2,8 +2,7 @@ from selenium import webdriver
 import undetected_chromedriver as uc
 
 # === Cấu hình Proxy ===
-# Đổi proxy này thành IP proxy thật bạn có
-proxy = "47.243.180.142:808"
+proxy = "47.243.180.142:808"  # Đảm bảo proxy bạn sử dụng đang hoạt động
 
 # === Tùy chọn Chrome ===
 options = uc.ChromeOptions()
@@ -15,6 +14,9 @@ options.add_argument("--disable-dev-shm-usage")
 
 # === Khởi tạo trình duyệt undetected ===
 driver = uc.Chrome(options=options)
+
+# === Kiểm tra IP proxy ===
+driver.get("https://api.ipify.org?format=json")  # Kiểm tra IP xem có thay đổi không
 
 # === Mở TikTok ===
 driver.get("https://www.tiktok.com/")
