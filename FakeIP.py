@@ -2,7 +2,7 @@ from selenium import webdriver
 import undetected_chromedriver as uc
 
 # === Cấu hình Proxy ===
-proxy = "47.243.180.142:808"  # Đảm bảo proxy bạn sử dụng đang hoạt động
+proxy = "8.219.97.248:80"  # Đảm bảo proxy bạn sử dụng đang hoạt động
 
 # === Tùy chọn Chrome ===
 options = uc.ChromeOptions()
